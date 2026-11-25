@@ -1,0 +1,38 @@
+{
+  "name": "@local/dsh-service",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Manage the systemd unit that runs this DSH instance: status, supervision guarantees, restart history, rotated log segments, control, access URL, unit file editing, and one-click repair.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": {
+    "name": "supengpeng"
+  }
+}

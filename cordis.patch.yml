@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-service
+      name: '@local/dsh-service'

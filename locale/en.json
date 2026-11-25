@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Service console",
+    "description": "The bundle reads and controls the systemd unit that runs this DSH instance: live state, boot enablement, restart history, rotated log segments, the access URL, an editable unit file, and six supervision checks. The checks show whether the unit is independent of terminals, starts at boot, recovers from a crash, waits for the network, keeps its log, and prints an access URL; repair restores the four the plugin can change. Find it in the Web GUI under Settings → Service, and the same operations are available as seven agent tools. It reads and controls `dsh.service` directly, so restarting or stopping the service drops the current page, and editing the unit changes how DSH starts. Repair rewrites the unit file after `systemd-analyze` verification, backs the previous file up as `<unit>.bak-<time>`, and runs `daemon-reload`; the tool previews by default and writes only when applied. It needs Linux with systemd and a DSH process allowed to run `systemctl` for that unit (root in the default deployment).",
+    "detail": "docs/DETAIL.md"
+  }
+}
